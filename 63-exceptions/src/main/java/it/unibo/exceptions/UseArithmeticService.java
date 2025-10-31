@@ -52,6 +52,7 @@ public final class UseArithmeticService {
         while(true) {
             try {
                 server.sendData(message);
+                return;
             } catch(IOException e) {
                 System.out.println("Not Sending");
             }
@@ -65,7 +66,7 @@ public final class UseArithmeticService {
          */
         while(true) {
             try {
-                server.receiveResponse();
+                return server.receiveResponse();
             } catch(IOException e) {
                 System.out.println("Not Receiving");
             }
